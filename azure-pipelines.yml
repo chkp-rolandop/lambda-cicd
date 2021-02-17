@@ -19,7 +19,7 @@ jobs:
 
   - script: |
       npm install
-      npm install - g serverless
+      npm install -g serverless
       npm install -D https://artifactory.app.protego.io/cloudguard-serverless-plugin.tgz
     displayName: 'npm install and serverless install'
   - task: DockerInstaller@0
