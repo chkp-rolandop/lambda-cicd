@@ -32,7 +32,9 @@ jobs:
         awsCredentials: 'rolandop-cp'
         regionName: $(AWS_REGION)
         scriptType: 'inline'
-        inlineScript: 
+        inlineScript: |
+          which sls
+          which serverless
           ./node_modules/.bin/serverless package -t $(CLOUDGUARD_TOKEN)
     displayName: 'Run Serverless package'
 
