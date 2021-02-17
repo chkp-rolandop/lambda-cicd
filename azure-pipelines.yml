@@ -6,10 +6,10 @@
 trigger:
 - master
 
-stages:
-- stage: Build
-pool:
-  vmImage: 'ubuntu-latest'
+jobs: 
+- job:
+  pool:
+    vmImage: 'ubuntu-latest'
 
   steps:
   - task: NodeTool@0
