@@ -29,11 +29,11 @@ jobs:
 
   - task: AWSShellScript@1
     inputs:
-        awsCredentials: 'aws-rolandopcp'
+        awsCredentials: 'rolandop-cp'
         regionName: $(AWS_REGION)
         scriptType: 'inline'
-        inlineScript: |
-          sls package
+        inlineScript: 
+          sls package -t $(CLOUDGUARD_TOKEN)
     displayName: 'Run Serverless package'
 
   - task: PublishPipelineArtifact@1
