@@ -33,9 +33,7 @@ jobs:
         regionName: $(AWS_REGION)
         scriptType: 'inline'
         inlineScript: |
-          which sls
-          which serverless
-          ./node_modules/.bin/serverless package -t $(CLOUDGUARD_TOKEN)
+          serverless package -t $(CLOUDGUARD_TOKEN)
     displayName: 'Run Serverless package'
 
   - task: PublishPipelineArtifact@1
