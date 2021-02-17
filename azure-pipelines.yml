@@ -42,9 +42,3 @@ jobs:
       artifact: 'cloudguard_output'
       publishLocation: 'pipeline'
     displayName: 'Publishing Artifacts'
-  
-  - task: PublishPipelineArtifact@1
-    inputs:
-      targetPath: $(System.DefaultWorkingDirectory)/output.template.yml
-      artifact: outputtemplate
-      publishLocation: 'pipeline'
